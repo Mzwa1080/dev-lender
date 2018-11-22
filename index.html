@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dev Lender</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+
+</head>
+<body>
+
+    <!-- <div class="login center">
+        <h2> Login </h2>
+
+        <input type="text" v-model="name" placeholder="Full Name">
+        <input type="password" v-model="surname" placeholder="password">
+
+        <button class="" v-on:click="onClick=name">Submit</button>
+
+        <p>
+                This is a text <h4 class="names">{{onClick}} </h4> 
+            
+        </p>
+    </div> -->
+
+
+    <form
+  class="app login"
+  @submit="checkForm"
+  action=""
+  method="post"
+>
+<h2> Sign up </h2>
+
+  <p v-if="errors.length">
+    <b>Please correct the following error(s):</b>
+    <ul>
+      <li v-for="error in errors">{{ error }}</li>
+    </ul>
+  </p>
+
+  <p>
+    <label for="name">Name</label>
+    <input
+      id="name"
+      v-model="name"
+      type="text"
+      name="name"
+    >
+  </p>
+  <p>
+    <label for="age">surname</label>
+    <input
+      id="surname"
+      v-model="surname"
+      type="text"
+      name="surname"
+    >
+  </p>
+
+  <label for="age">password</label>
+  <input
+    id="Password"
+    v-model="Password"
+    type="password"
+    name="Password"
+    min="6">
+</p>
+
+<label for="age">email</label>
+<input
+  id="email"
+  v-model="email"
+  type="text"
+  name="email"
+  min="0">
+</p>
+
+<label for="age">Phone number</label>
+<input
+  id="phoneNo"
+  v-model="phoneNo"
+  type="number"
+  name="phoneNo"
+  min="0">
+</p>
+
+<label for="age">Date of Birth</label>
+<input
+  id="DofB"
+  v-model="DofB"
+  type="any"
+  name="DofB"
+  min="6">
+</p>
+
+
+  <p>
+    <label for="age">Age</label>
+    <input
+      id="age"
+      v-model="age"
+      type="number"
+      name="age"
+      min="0">
+  </p>
+
+  <p>
+    <label for="age">address</label>
+    <input
+      id="address"
+      v-model="address"
+      type="any"
+      name="address"
+      min="0">
+  </p>
+
+  <p>
+    <label for="age">Project Name</label>
+    <input
+      id="projectName"
+      v-model="projectName"
+      type="any"
+      name="projectName"
+      >
+  </p>
+
+  <p>
+    <label for="age">price</label>
+    <input
+      id="price"
+      v-model="price"
+      type="number"
+      name="price"
+      min="0">
+  </p>
+
+  <p>
+
+  <p>
+    <label for="movie">Categories</label>
+    <select
+      id="movie"
+      v-model="movie"
+      name="movie"
+    >
+      <option>Front-end</option>
+      <option>Back-end</option>
+      <option>Mobile Devs</option>
+      <option>Web Devs</option>
+    </select>
+  </p>
+
+  <p>
+    <input
+      type="submit"
+      value="Submit"
+    >
+  </p>
+
+</form>
+
+
+    <script src="vue.js"></script>
+    <style>
+        .login {
+            text-align: center;
+        }
+        .names{
+            text-align: center;
+            color: red;
+
+        }
+    </style>
+</body>
+</html>
